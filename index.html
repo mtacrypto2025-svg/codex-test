@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ماموریت ساتوشی | بازی اول‌شخص تریدر</title>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="https://unpkg.com/es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="hud">
+      <div class="card">
+        <h1>ماموریت: پیدا کردن ساتوشی</h1>
+        <p>
+          تو یک تریدر بازار کریپتو هستی. برای پیدا کردن ساتوشی باید <b>۳ کلید کیف‌پول</b>
+          را از ایستگاه‌های داده جمع‌آوری کنی.
+        </p>
+        <ul>
+          <li>حرکت: WASD</li>
+          <li>نگاه: حرکت ماوس</li>
+          <li>تعامل: E</li>
+          <li>دویدن: Shift</li>
+        </ul>
+        <button id="startBtn">شروع بازی</button>
+      </div>
+      <div id="stats" class="hidden">
+        <span id="keys">کلیدها: ۰/۳</span>
+        <span id="price">BTC: در حال اتصال...</span>
+        <span id="status">وضعیت: جستجو در ناحیه نئون</span>
+      </div>
+      <div id="centerHint" class="hidden">برای تعامل E را بزن</div>
+      <div id="toast" class="hidden"></div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
